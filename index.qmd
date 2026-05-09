@@ -12,6 +12,7 @@ format:
       data-background-image: images/title.png
       data-background-color: "white"
       style: "text-align: left; right: 10%; font-size: 0.9em"
+    footer: "bit.ly/pyladies-monterrey-llms"
 revealjs-plugins:
   - tabset
 ---
@@ -129,6 +130,10 @@ There are several ways to work with LLMs in Python. You can use low-level provid
 # Introducing chatlas
 
 ![](images/chatlas-logo.png){fig-align="center"}
+
+::: footer
+[chatlas documentation](https://posit-dev.github.io/chatlas/)
+:::
 
 ## Why chatlas?
 
@@ -385,7 +390,7 @@ chat = ChatGoogle(model="gemini-2.0-flash-exp")
 ### Ollama (local)
 ```python
 from chatlas import ChatOllama
-chat = ChatOllama(model="llama3.2")
+chat = ChatOllama(model="gemma3")
 ```
 
 :::
@@ -524,10 +529,10 @@ Watch what happens now. The model recognizes it needs weather data, calls our fu
 ![](images/View_of_Monterrey.jpg){width=200px}
 
 ```{.python code-line-numbers="|1|4|5|"}
-chat = chatlas.ChatOllama(model="gemma3")
+chat = chatlas.ChatOllama(model="llava")
 
 chat.chat(
-  chatlas.content_image_file("./presentation/images/View_of_Monterrey.jpg"),
+  chatlas.content_image_file("./images/View_of_Monterrey.jpg"),
   "Can you explain this image? Be concise."
 )
 ```
@@ -535,10 +540,11 @@ chat.chat(
 . . .
 
 ```
-Here's a concise explanation of the image:
-
-This photo shows the iconic Popocatépetl volcano in Mexico, rising dramatically in the background. It's framed by a sprawling cityscape – likely Mexico City – and a dramatic sky filled with puffy, layered clouds.
-The volcano's distinctive sharp peaks are clearly visible.
+The image shows a scenic view of a city with a large volcanic mountain in the
+background, on which a city is nestled. There's a clear sky above, and some
+clouds are scattered. In the foreground, there appears to be a body of water
+reflecting the sky. The photo seems to have been taken from a distance and
+captures both urban development and natural landscape elements coexisting.
 ```
 
 ::: notes
@@ -551,7 +557,7 @@ chatlas can handle images too. You pass an image file and ask questions about it
 chat = chatlas.ChatOllama(model="llava")
 
 chat.chat(
-  chatlas.content_pdf_file("./presentation/images/data-projects-in-monterrey-mexico.pdf"),
+  chatlas.content_pdf_file("./images/data-projects-in-monterrey-mexico.pdf"),
   "What are the main findings in this report? Be concise."
 )
 ```
@@ -865,6 +871,22 @@ PyLadies Monterrey Event Assistant
 
 ::: notes
 The PyLadies event assistant is just one example. You can use chatlas for data analysis tasks, processing documents at scale, integrating with external APIs, automating workflows, or building specialized agents. The common thread is connecting LLMs to your specific tools and data.
+:::
+
+::: notes
+[Structured data](https://posit-dev.github.io/chatlas/get-started/structured-data.html)
+:::
+
+## Next steps
+
+::: incremental
+- **MCP (Model Context Protocol)**: Connect LLMs to data sources, APIs, and tools using a standardized protocol
+- **RAG (Retrieval Augmented Generation)**: Ground responses in your documents and knowledge bases
+- **Evals**: Test and measure your LLM applications to ensure quality and reliability
+:::
+
+::: notes
+Once you’re comfortable with the basics, there are powerful techniques to explore. MCP lets you build reusable connections to data sources. RAG helps LLMs answer questions based on your specific documents. And evals help you systematically test and improve your applications. These are the building blocks for production-grade LLM systems.
 :::
 
 ## Acknowledgements and resources
