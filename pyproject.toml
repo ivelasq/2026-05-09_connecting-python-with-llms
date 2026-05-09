@@ -1,0 +1,5 @@
+[project]
+name = "2026-05-09_connecting-python-with-llms"
+version = "0.1.0"
+requires-python = ">= 3.14.1"
+dependencies = []

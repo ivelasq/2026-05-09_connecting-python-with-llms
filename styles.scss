@@ -1,0 +1,16 @@
+/*-- scss:defaults --*/
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=Rye&display=swap');
+
+$font-family-sans-serif: "Farro", sans-serif;
+$presentation-title-slide-text-align: "left";
+$code-block-font-size: 0.6em;
+$code-color: #8b6663;
+$link-color: #af9552;
+
+/*-- scss: rules --*/
+
+.title {
+    font-family: "Rye" !important;
+}

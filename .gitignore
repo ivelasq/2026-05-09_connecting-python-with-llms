@@ -1,0 +1,5 @@
+.env
+*.html
+.venv
+.claude
+/index_files/
