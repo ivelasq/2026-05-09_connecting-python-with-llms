@@ -877,6 +877,52 @@ The PyLadies event assistant is just one example. You can use chatlas for data a
 [Structured data](https://posit-dev.github.io/chatlas/get-started/structured-data.html)
 :::
 
+# Packages that work with chatlas
+
+## Chat with your data in R and Python with querychat
+
+:::: {.columns}
+
+::: {.column width="10%"}
+
+![](images/querychat-logo.png)
+
+:::
+
+::: {.column width="90%"}
+
+![](images/querychat-example.png){fig-align="center" width="80%"}
+
+:::
+
+::::
+
+::: footer
+[querychat documentation](https://posit-dev.github.io/querychat/)
+:::
+
+## Natural Language Processing (NLP) with mall
+
+:::: {.columns}
+
+::: {.column width="10%"}
+
+![](images/mall-logo.png)
+
+:::
+
+::: {.column width="90%"}
+
+![](images/mall-example.png){style="box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-radius: 5px;" width=80% }
+
+:::
+
+::::
+
+::: footer
+[mall documentation](https://mlverse.github.io/mall/)
+:::
+
 ## Next steps
 
 ::: incremental
