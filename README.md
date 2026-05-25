@@ -1,5 +1,7 @@
 # Connecting Python with LLMs
 
+<img width="1706" height="960" alt="thumbnail" src="https://github.com/user-attachments/assets/9c616fef-0be4-4e27-a77f-c472c23110e0" />
+
 ## Details
 
 <ul style="list-style-type: none; padding-left: 0;">
