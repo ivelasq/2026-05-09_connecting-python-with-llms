@@ -522,14 +522,14 @@ It's a pleasant day in Monterrey with comfortable temperatures and light winds!
 Watch what happens now. The model recognizes it needs weather data, calls our function with Monterrey's coordinates, gets the real-time results, and incorporates them into a natural response. This is the power of tool calling - your LLM can now interact with any API or data source you provide.
 :::
 
-# Multi-modal input
+# Multi-modal input {background-image="images/section-slide.png"}
 
 ## Image input
 
 ![](images/View_of_Monterrey.jpg){width=200px}
 
 ```{.python code-line-numbers="|1|4|5|"}
-chat = chatlas.ChatOllama(model="llava")
+chat = chatlas.ChatOllama(model="gemma3")
 
 chat.chat(
   chatlas.content_image_file("./images/View_of_Monterrey.jpg"),
@@ -554,7 +554,7 @@ chatlas can handle images too. You pass an image file and ask questions about it
 ## PDF input
 
 ```{.python code-line-numbers="|1|4|5|"}
-chat = chatlas.ChatOllama(model="llava")
+chat = chatlas.ChatAnthropic(model="claude-sonnet-4-6", api_key=os.getenv("ANTHROPIC_API_KEY"))
 
 chat.chat(
   chatlas.content_pdf_file("./images/data-projects-in-monterrey-mexico.pdf"),
@@ -563,15 +563,35 @@ chat.chat(
 ```
 
 ```
-The image displays a natural landscape with a large, rounded mountain situated near what appears to be an
-urban area. In the foreground are various trees and clouds, giving the impression of a hazy or overcast day.
-Behind the trees, we can see a cityscape of buildings at varying distances, culminating in the tallest
-structures that resemble those in a major metropolitan area with high-rise constructions. In the distant
-background, centered among the clouds, is a mountain peak that stands out due to its relative height and
-isolation. The top right corner features an image of a volcano-like mountain on a glossy surface, suggesting
-the photo may have been taken from a screen or print. This is a cityscape as viewed looking toward the coast
-or another body of water, with the natural scenery providing a serene counterpoint to the bustling urban
-environment below.
+Main Findings                                                                                   
+
+Context & Challenge                                                                                
+
+ • The Monterrey Metropolitan Area (MMA) is one of Mexico's top three GHG-emitting territories     
+   (30.34 MtCO₂e), with population doubling and urban area growing 2.8x between 1990-2020          
+ • Local governments lacked technical capabilities and sufficient data to support effective climate
+   decision-making                                                                                 
+
+Key Approach                                                                                       
+
+ • Combined local climate data with Google's Environmental Insights Explorer (EIE) platform,       
+   alongside complementary tools (Maitec for mobility, Tecsb for green/solar technologies)         
+ • Engaged diverse stakeholders — government, private sector, academia, and marginalized           
+   communities — through workshops and participatory sessions                                      
+
+Main Outcomes                                                                                      
+
+ • Generated more robust, data-driven information to support Climate Action Plans (CAPs)           
+ • Identified opportunities in solar energy potential, sustainable buildings, and low-emission     
+   transportation                                                                                  
+ • Increased transparency and accountability in climate action planning                            
+ • Contributed to better-informed public policies at both municipal and state levels               
+
+Critical Lesson                                                                                    
+
+ • Stakeholder engagement was the most decisive factor for success — particularly identifying      
+   influential community members and including marginalized voices to ensure inclusive,            
+   science-based climate targets
 ```
 
 ::: notes
